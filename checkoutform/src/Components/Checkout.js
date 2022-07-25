@@ -27,7 +27,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        ULTA Beauty
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -87,17 +87,23 @@ export default function Checkout() {
           borderBottom: (t) => `1px solid ${t.palette.divider}`,
         }}
       >
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
+        <Toolbar style={{ background: '#E80D5A' }}>
+          <Grid item xs={6}>
+          <img src="https://media.allure.com/photos/5a2059acfb107e46b5af8401/3:2/w_1458,h_972,c_limit/90s%20Ulta%20Lede.jpg" alt="" height="49px" width="73px"></img>
+          
+          </Grid>
+          <Grid item xs={6}>
+          <Typography variant="h6" noWrap style={{ color: 'white' }}>
             ULTA Beauty
           </Typography>
+          </Grid>
         </Toolbar>
       </AppBar>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
         <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
           <br></br>
           <Grid align="center">
-            <Avatar style={iconStyle}>
+            <Avatar style={{background: '#E80D5A'}}>
               <LockIcon></LockIcon>
             </Avatar>
             <br></br>

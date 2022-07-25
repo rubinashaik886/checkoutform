@@ -12,6 +12,7 @@ import { pink } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import InputAdornment from '@mui/material/InputAdornment';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import Box from '@mui/material/Box';
 // import Box from '@mui/material/Box';
 // import Input from '@mui/material/Input';
 // import InputLabel from '@mui/material/InputLabel';
@@ -34,6 +35,10 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
     },
   }));
 
+  const buttonStyle = {
+    margin: "10 px",
+  }
+
 export default function PaymentForm() {
   return (
 
@@ -41,7 +46,7 @@ export default function PaymentForm() {
         
       <Typography variant="h6" gutterBottom>
         Payment method
-      </Typography><br></br>
+      </Typography>
       <Grid>
       {/* <ButtonGroup variant="outlined" style={btnStyle}>
         <Button>Credit Card</Button>
@@ -49,10 +54,14 @@ export default function PaymentForm() {
         <Button>Afterpay</Button>
     </ButtonGroup> */}
     
-    <ColorButton variant="contained">Credit Card</ColorButton>
-    <ColorButton variant="contained">PayPal</ColorButton>
-    <ColorButton variant="contained">Afterpay</ColorButton>
+    <Box align="center">
+
+      <ColorButton variant="contained" style={buttonStyle} sx={{ mt: 3, ml: 1 }}>Credit Card</ColorButton>
+      <ColorButton variant="contained" sx={{ mt: 3, ml: 1 }}>PayPal</ColorButton>
+      <ColorButton variant="contained" sx={{ mt: 3, ml: 1 }}>Afterpay</ColorButton>
     
+    </Box>
+
     <br></br>
     <br></br>
       </Grid>
@@ -122,8 +131,10 @@ export default function PaymentForm() {
         </Grid>
         <Grid item xs={12} >
           <FormControlLabel
-            control={<Switch color="secondary" name="saveCard" value="yes" />}
+            control={<Switch name="saveCard" value="yes" style={{color: '#E80D5A'}}/>}
+            
             label="Billing address same as shipping address"
+
           />
         </Grid>
         {/* <Grid item xs={12}>
