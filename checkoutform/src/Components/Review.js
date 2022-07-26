@@ -7,25 +7,25 @@ import Grid from '@mui/material/Grid';
 
 const products = [
   {
-    name: 'Product 1',
-    desc: 'A nice thing',
-    price: '$9.99',
+    name: 'VICTOR&ROLF',
+    desc: 'Good fortune Eau de Parfum',
+    price: '$129.00',
+    logo: 'https://images.ulta.com/is/image/Ulta/2597683?$md$',
   },
   {
-    name: 'Product 2',
-    desc: 'Another thing',
-    price: '$3.45',
+    name: 'Marajuca Tinted Moisturizer',
+    desc: '',
+    price: '$29.00',
+    logo: 'https://images.ulta.com/is/image/Ulta/2562233?$md$',
+
   },
   {
-    name: 'Product 3',
-    desc: 'Something else',
-    price: '$6.51',
+    name: 'VICTOR&ROLF',
+    desc: 'Flowerbomb Nectar Eau de Parfum',
+    price: '$175.00',
+    logo: 'https://images.ulta.com/is/image/Ulta/2536709?$md$',
   },
-  {
-    name: 'Product 4',
-    desc: 'Best thing of all',
-    price: '$14.11',
-  },
+
   { name: 'Shipping', desc: '', price: 'Free' },
 ];
 
@@ -48,13 +48,17 @@ export default function Review() {
           <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
             <ListItemText primary={product.name} secondary={product.desc} />
             <Typography variant="body2">{product.price}</Typography>
+            <Grid>
+              <img src={product.logo} alt=''></img>
+            </Grid>
+            
           </ListItem>
         ))}
 
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            $34.06
+            $333.00
           </Typography>
         </ListItem>
       </List>

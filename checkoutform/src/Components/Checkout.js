@@ -20,6 +20,9 @@ import Avatar from '@mui/material/Avatar';
 import LockIcon from '@mui/icons-material/Lock';
 import { pink } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
+import Fab from '@mui/material/Fab'
+import HomeIcon from '@mui/icons-material/Home';
+
 
 
 function Copyright() {
@@ -71,10 +74,6 @@ export default function Checkout() {
     setActiveStep(activeStep - 1);
   };
 
-  const iconStyle = {
-    backgroundColor: "pink",
-}
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -88,15 +87,20 @@ export default function Checkout() {
         }}
       >
         <Toolbar style={{ background: '#E80D5A' }}>
-          <Grid item xs={6}>
+          <Grid item xs={6} sx={{ mt: 1, ml: 1 }}>
+          
           <img src="https://media.allure.com/photos/5a2059acfb107e46b5af8401/3:2/w_1458,h_972,c_limit/90s%20Ulta%20Lede.jpg" alt="" height="49px" width="73px"></img>
           
           </Grid>
-          <Grid item xs={6}>
-          <Typography variant="h6" noWrap style={{ color: 'white' }}>
-            ULTA Beauty
+          <Box>
+          <Typography variant="h6" noWrap style={{ color: 'white' }} sx={{ mt: 3, ml: 1 }}>
+            ULTA Beauty | Checkout
           </Typography>
-          </Grid>
+          <span className="font-link" style={{variant:"h6", color: "#E80D5A"}} sx={{ mt: 3, ml: 1 }}>
+             ULTA Beauty
+          </span>
+          </Box>
+         
         </Toolbar>
       </AppBar>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
@@ -130,6 +134,14 @@ export default function Checkout() {
                   confirmation, and will send you an update when your order has
                   shipped.
                 </Typography>
+                <Box>
+                  <Grid sx={{ mt: 3, ml: 1 }}>
+                    <Fab variant="extended" style={{background: "#E80D5A", color: "white"}} href="https://www.ulta.com/">
+                      <HomeIcon sx={{ mr: 1 }} />
+                      Head back to main page
+                    </Fab>
+                   </Grid>
+                </Box>
               </React.Fragment>
             ) : (
               <React.Fragment>

@@ -57,8 +57,8 @@ export default function PaymentForm() {
     <Box align="center">
 
       <ColorButton variant="contained" style={buttonStyle} sx={{ mt: 3, ml: 1 }}>Credit Card</ColorButton>
-      <ColorButton variant="contained" sx={{ mt: 3, ml: 1 }}>PayPal</ColorButton>
-      <ColorButton variant="contained" sx={{ mt: 3, ml: 1 }}>Afterpay</ColorButton>
+      <ColorButton variant="contained" sx={{ mt: 3, ml: 1 }} href="https://www.paypal.com/us/home">PayPal</ColorButton>
+      <ColorButton variant="contained" sx={{ mt: 3, ml: 1 }} href="https://www.afterpay.com/en-US">Afterpay</ColorButton>
     
     </Box>
 
